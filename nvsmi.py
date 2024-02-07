@@ -163,8 +163,8 @@ def nvidia_smi_query_gpu(bin_path, query_list, converters_dict, id_query='pci.bu
 	# query as id.
 	# FIXME: A better and more generic way to check the output might be to check
 	#        if `values` from the `split` has all the queries.
-	if not output.startswith('0'):
-		error_exit('The output from {} does not seem right.'.format(bin_path))
+	#if not output.startswith(b'0'):
+	#	error_exit('The output from {} does not seem right.'.format(bin_path))
 
 	result = {}
 	for line in output.decode().strip().split('\n'):
